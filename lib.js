@@ -1,5 +1,3 @@
-var bar = 'Hello!!';
-var x = bar;
 var sumAll = function(arr){
     return arr.reduce(function(a,e){return a + e;},0);
 };
@@ -9,6 +7,7 @@ var productAll = function(arr){
 var mean = function(arr){
     return sumAll(arr) / arr.length;
 };
+//squares is not exported by this module
 var squares = function(arr){
     return arr.map(function(e){return e*e;});
 };
@@ -17,11 +16,9 @@ var variance = function(arr){
     return sumAll( squares( arr.map(function(e){return e-m;}) ) );
 };
 module.exports = {
-    bar: bar,
     sumAll: sumAll,
     productAll: productAll,
     mean: mean,
-    squares: squares,
     variance: variance
 };
 
