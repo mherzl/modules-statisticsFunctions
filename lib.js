@@ -9,16 +9,15 @@ var sumAll = function(arr){
 var productAll = function(arr){
     return arr.reduce(function(a,e){return a*e;},1);
 };
-/*
-var expAll = function(arr){
-    return arr.reduce(function(a,e){return a^e;});
+
+var mean = function(arr){
+    return sumAll(arr) / arr.length;
 };
-*/
 
 module.exports = {
     bar: bar,
     sumAll: sumAll,
-    productAll: productAll
-    //expAll = expAll
+    productAll: productAll,
+    mean: mean
 };
 
